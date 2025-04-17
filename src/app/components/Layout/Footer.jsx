@@ -14,8 +14,7 @@ export default function Footer() {
               Vinícius<span className="text-white">Dev</span>
             </Link>
             <p className="text-gray-400 mb-4">
-              Desenvolvedor web especializado em criar experiências digitais
-              incríveis com foco em animações 3D.
+              Desenvolvedor Full Stack especializado em criar transformações.
             </p>
           </div>
 
@@ -66,9 +65,9 @@ export default function Footer() {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
                 <a
-                  href="mailto:contato@viniciusdev.me"
+                  href="mailto:viniciusgomes.33mes@gmail.com"
                   className="hover:text-[rgb(var(--primary-color))] transition-colors">
-                  contato@viniciusdev.me
+                  viniciusgomes.33mes@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -105,11 +104,11 @@ export default function Footer() {
                   />
                 </svg>
                 <a
-                  href="https://linkedin.com/in/viniciusdev"
+                  href="https://linkedin.com/in/viniciusg03"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[rgb(var(--primary-color))] transition-colors">
-                  linkedin.com/in/viniciusdev
+                  linkedin.com/in/viniciusg03
                 </a>
               </li>
             </ul>

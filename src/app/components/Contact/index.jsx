@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -93,7 +94,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium mb-1">Email</h4>
-                  <p className="text-gray-400">contato@viniciusdev.me</p>
+                  <p className="text-gray-400">viniciusgomes.33mes@gmail.com</p>
                 </div>
               </div>
 
@@ -121,7 +122,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium mb-1">Localização</h4>
-                  <p className="text-gray-400">São Paulo, Brasil</p>
+                  <p className="text-gray-400">Brasília, Brasil</p>
                 </div>
               </div>
 
@@ -170,7 +171,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/viniciusdev"
+                  href="https://linkedin.com/in/viniciusg03"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-[rgba(var(--primary-color),0.1)] rounded-lg hover:bg-[rgba(var(--primary-color),0.2)] transition-all">
@@ -198,7 +199,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="https://instagram.com/viniciusdev"
+                  href="https://instagram.com/vinikk.j"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-[rgba(var(--primary-color),0.1)] rounded-lg hover:bg-[rgba(var(--primary-color),0.2)] transition-all">

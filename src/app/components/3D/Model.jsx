@@ -1,51 +1,62 @@
-import { useRef } from "react";
+"use client";
+import { useRef, useState, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
-import { MeshDistortMaterial, Sphere } from "@react-three/drei";
-import * as THREE from "three";
+import { CylinderGeometry, Vector2 } from "three";
+import { Cylinder, Torus, Text } from "@react-three/drei";
 
-export default function Model() {
-  const sphereRef = useRef();
-  const sphereRef2 = useRef();
+export default function JavaCupModel() {
+  const cupRef = useRef();
+  const steamRef = useRef();
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime();
-    if (sphereRef.current) {
-      sphereRef.current.position.y = Math.sin(t * 0.5) * 0.5;
-      sphereRef.current.rotation.y = t * 0.2;
+
+    if (cupRef.current) {
+      cupRef.current.rotation.y = t * 0.2;
+      cupRef.current.position.y = Math.sin(t * 0.5) * 0.3;
     }
-    if (sphereRef2.current) {
-      sphereRef2.current.position.x = Math.sin(t * 0.3) * 2;
-      sphereRef2.current.position.y = Math.cos(t * 0.4) * 0.5;
-      sphereRef2.current.rotation.y = -t * 0.1;
+
+    if (steamRef.current) {
+      steamRef.current.position.y = 1.8 + Math.sin(t * 2) * 0.1;
+      steamRef.current.scale.y = 1 + Math.sin(t * 3) * 0.1;
     }
   });
 
   return (
-    <group>
-      <mesh ref={sphereRef} position={[3, 0, 0]}>
-        <Sphere args={[1.2, 32, 32]}>
-          <MeshDistortMaterial
-            color={new THREE.Color(0x64ffda)}
-            attach="material"
-            distort={0.4}
-            speed={2}
-            roughness={0.2}
-            metalness={0.8}
-          />
-        </Sphere>
+    <group ref={cupRef}>
+      {/* Corpo da xícara */}
+      <mesh position={[0, 0, 0]}>
+        <cylinderGeometry args={[1, 0.8, 1.5, 32]} />
+        <meshStandardMaterial color="#7896ff" metalness={0.5} roughness={0.2} />
       </mesh>
 
-      <mesh ref={sphereRef2} position={[-3, 0, 0]}>
-        <Sphere args={[0.8, 32, 32]}>
-          <MeshDistortMaterial
-            color={new THREE.Color(0x7896ff)}
-            attach="material"
-            distort={0.6}
-            speed={1.5}
-            roughness={0.3}
-            metalness={0.7}
-          />
-        </Sphere>
+      {/* Interior da xícara (café) */}
+      <mesh position={[0, 0.6, 0]}>
+        <cylinderGeometry args={[0.9, 0.7, 0.3, 32]} />
+        <meshStandardMaterial color="#3c2415" metalness={0.2} roughness={0.1} />
+      </mesh>
+
+      {/* Alça da xícara */}
+      <mesh position={[1.3, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
+        <torusGeometry args={[0.4, 0.1, 16, 32, Math.PI]} />
+        <meshStandardMaterial color="#7896ff" metalness={0.5} roughness={0.2} />
+      </mesh>
+
+      {/* Logo Java - usando Text em vez de Text3D para evitar problemas com carregamento de fontes */}
+      <Text
+        position={[-0.5, 0, 1]}
+        rotation={[0, 0, 0]}
+        fontSize={0.3}
+        color="#64ffda"
+        anchorX="center"
+        anchorY="middle">
+        Java
+      </Text>
+
+      {/* Vapor */}
+      <mesh ref={steamRef} position={[0, 1.8, 0]}>
+        <torusGeometry args={[0.2, 0.05, 16, 32, Math.PI * 1.5]} />
+        <meshStandardMaterial color="white" transparent opacity={0.4} />
       </mesh>
     </group>
   );

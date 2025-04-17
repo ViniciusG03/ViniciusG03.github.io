@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -53,11 +54,12 @@ export default function Header() {
             href="/cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary"
+            className="relative font-medium tracking-wide hover:text-[rgb(var(--primary-color))] transition-colors group"
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}>
             Currículo
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[rgb(var(--primary-color))] transition-all group-hover:w-full"></span>
           </motion.a>
         </nav>
 

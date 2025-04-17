@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera, Stars } from "@react-three/drei";
 import { Suspense } from "react";
-import Model from "./Model";
+import ReactLogo from "./ReactLogo";
 
 export default function Scene() {
   return (
@@ -10,7 +10,7 @@ export default function Scene() {
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 5]} intensity={1} />
       <Suspense fallback={null}>
-        <Model />
+        <ReactLogo />
       </Suspense>
       <Stars
         radius={100}

@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import Scene from "../3D/Scene";
 
@@ -25,14 +26,14 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
               className="heading text-gradient">
-              Vinícius Gonçalves
+              Vinícius Gomes
             </motion.h1>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
               className="subheading text-gray-300">
-              Desenvolvedor Web & Especialista em Animações 3D
+              Desenvolvedor Full Stack
             </motion.h2>
           </div>
 
@@ -42,8 +43,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 1.1 }}
             className="text-gray-400 text-lg mb-8">
             Eu crio experiências digitais incríveis com foco em interfaces
-            modernas, animações fluidas e interativas. Especializado em React,
-            Three.js e experiências 3D para web.
+            modernas. Especializado em React e Java.
           </motion.p>
 
           <motion.div

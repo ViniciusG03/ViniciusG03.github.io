@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const skills = [
-  { name: "React", level: 90 },
-  { name: "Next.js", level: 85 },
-  { name: "Three.js", level: 80 },
+  { name: "Java", level: 90 },
+  { name: "Springboot", level: 85 },
+  { name: "React", level: 80 },
   { name: "JavaScript", level: 90 },
   { name: "TypeScript", level: 75 },
-  { name: "CSS/SASS", level: 85 },
+  { name: "SQL", level: 85 },
   { name: "Node.js", level: 70 },
   { name: "WebGL", level: 65 },
 ];
@@ -40,8 +40,8 @@ export default function About() {
               <div className="absolute inset-0 p-1 z-20">
                 <div className="w-full h-full bg-[rgb(var(--background-start-rgb))] rounded-lg overflow-hidden">
                   <Image
-                    src="/images/profile.jpg"
-                    alt="Vinícius Gonçalves"
+                    src="/images/profile.png"
+                    alt="Vinícius Oliveira"
                     fill
                     style={{ objectFit: "cover" }}
                     className="rounded-lg hover:scale-105 transition-transform duration-500"
@@ -61,20 +61,22 @@ export default function About() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}>
             <h3 className="text-2xl font-bold mb-4">
-              Desenvolvedor Web & Especialista em Animações 3D
+              Desenvolvedor Full Stack
             </h3>
             <p className="text-gray-300 mb-6">
               Olá! Sou Vinícius, um desenvolvedor apaixonado por criar
-              experiências digitais inovadoras. Com mais de 5 anos de
+              experiências digitais inovadoras. Com mais de 2 anos de
               experiência em desenvolvimento web, me especializei na criação de
-              interfaces modernas e interativas, com foco em animações 3D.
+              interfaces modernas e interativas, com foco em um backend sólido e
+              escalável.
             </p>
             <p className="text-gray-300 mb-6">
-              Minha jornada começou com HTML, CSS e JavaScript, e logo evoluiu
-              para frameworks como React e Next.js. A descoberta do Three.js e
-              React Three Fiber abriu um novo mundo de possibilidades para
-              minhas criações, permitindo que eu desenvolvesse experiências 3D
-              imersivas diretamente no navegador.
+              Minha jornada começou com Java para fazer alguns plugins de
+              minecraft, e logo evoluiu para frameworks como Springboot, React e
+              Next.js. A descoberta do Three.js e React Three Fiber abriu um
+              novo mundo de possibilidades para minhas criações, permitindo que
+              eu desenvolvesse experiências 3D imersivas diretamente no
+              navegador.
             </p>
 
             <div className="mb-8">
