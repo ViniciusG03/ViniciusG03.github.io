@@ -4,6 +4,12 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: [],
+    unoptimized: true,
+  },
+  output: "export",
+  trailingSlash: false,
+  images: {
+    unoptimized: true,
   },
 };
 

@@ -6,7 +6,6 @@ import { useGLTF } from "@react-three/drei";
 
 export default function GhostCatModel(props) {
   const group = useRef();
-  // Substitua pelo caminho do seu modelo
   const { scene } = useGLTF("/models/ghost_cat.glb");
 
   // Animação flutuante
